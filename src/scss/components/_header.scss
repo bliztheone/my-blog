@@ -1,0 +1,29 @@
+.header {
+  background: #FFFFFF;
+  
+  &__content {
+    padding-bottom: 48px;
+  }
+
+  &__brand{
+    padding-top: 35px;
+    margin-bottom: 21px;
+  }
+
+  &__link {
+    font-weight: 300;
+    font-size: 36px;
+    line-height: 54px;
+    padding-bottom: 48px;
+    color: black;
+    margin-right: 23px;
+  }
+  
+  &__link:hover {
+    color: black;
+    text-decoration: none;
+    color: #FF6969;
+  }
+}
+
+

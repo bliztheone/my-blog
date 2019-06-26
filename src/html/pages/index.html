@@ -1,17 +1,16 @@
 <html lang="ru">
-<head>
-  <meta charset="UTF-8">
-  <title>Блог Александра Филоненко</title>
-  <link rel="stylesheet" href="./main.css">
-  <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
-  <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css">
-  
-</head>
-<body>
-  @@include('./../components/header.html')
-  <div class="InfoBlock">
-    <div class="InfoBlock__layer">
+  <head>
+    <meta charset="UTF-8">
+    <title>Блог Александра Филоненко</title>
+    <link rel="stylesheet" href="./main.css">
+    <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css">
+    
+  </head>
+  <body>
+    @@include('./../components/header.html')
+    <div class="InfoBlock">
       <div class="container">
         <div class="infoblock__content">
           <h1 class="InfoBlock__maininfo">
@@ -23,22 +22,27 @@
         </div>
       </div>
     </div>
-  </div>
-  <div class="contacts">
-    <div class="container">
-      <div class="contacts__content">
-        <h1 class="contacts__main">
-          КОНТАКТЫ
-        </h1>
+    <div class="contacts">
+      <div class="container">
         <div class="contacts__content">
-          <a class="white" href="https://vk.com/blizz_tlt">Вконтакте</a> <br>
-          <a class="white" href="https://twitter.com/bliztheone"> Twitter</a> <br>
-          Тел: 89179508020 
+          <h1 class="contacts__main">
+            КОНТАКТЫ
+          </h1>
+          <div class="contacts_links">
+            <div class="contacts__link"> 
+              <a class="contacts__link_white" href="https://vk.com/blizz_tlt">Вконтакте</a> 
+            </div>
+            <div class="contacts__link">
+              <a class="contacts__link_white" href="https://twitter.com/bliztheone"> Twitter</a>
+            </div>
+            <div class="contacts__phone">
+              Тел: 89179508020
+            </div>
+          </div>
         </div>
       </div>
     </div>
-  </div>
-  @@include('./../components/footer.html')
-</body>
-<script src="script.js"></script>
+    @@include('./../components/footer.html')
+  </body>
+  <script src="script.js"></script>
 </html>
