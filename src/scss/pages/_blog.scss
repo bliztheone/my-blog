@@ -1,2 +1,43 @@
-.yelow { color:yellow;
-font-size: 40px;}
+.blog {
+  background: #FFE01B;
+
+  &__mainheader {
+    padding-top: 50px;
+    margin-bottom: 70px;
+    font-weight: bold;
+    font-size: $text-size48;
+    line-height: 72px;
+    text-transform: uppercase;
+  }
+
+  &__header {
+    margin-bottom: 40px;
+    font-size: $text-size36;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    @include bold(18px);
+  }
+
+  &__text {
+    margin-top: 35px;
+  }
+
+  &__date {
+    margin-top: 20px;
+    @include bold(18px);
+
+    &_prefooter-padding {
+    padding-bottom: 50px;
+    }
+  }
+
+  &__line {
+    margin-bottom: 47px;
+    margin-top: 53px;
+    border: 1px solid #000000;
+  }
+}
+

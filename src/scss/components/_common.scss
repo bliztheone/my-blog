@@ -14,3 +14,11 @@ h1 {
   margin: 0;
 }
 
+$text-size48: 48px;
+
+$text-size36: 36px;
+
+@mixin bold($size) {
+  font-size: $size;
+  font-weight: bold;
+}

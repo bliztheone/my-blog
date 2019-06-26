@@ -3,7 +3,7 @@
   background: linear-gradient( to top,rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/Rectangle.png) no-repeat center / cover;
   color: white;
 
-  &__maininfo {
+  &__header {
     font-weight: bold;
     text-transform: uppercase;
     font-size: 48px;
@@ -24,19 +24,18 @@
   background: #23374F;
   text-align: center;
 
-  &__main {
+  &__header {
     font-weight: bold;
     font-size: 48px;
     line-height: 72px;
     padding-top: 33px;
-    padding-bottom: 22px;
+    margin-bottom: 22px;
   }
 
   &__content {
     font-weight: 300;
     font-size: 48px;
     line-height: 72px;
-    padding: 21px 0 28px 0;
     color:white;
   }
 
