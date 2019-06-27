@@ -1,8 +1,8 @@
 .blog {
   background: #FFE01B;
+  padding: 50px 0;
 
-  &__mainheader {
-    padding-top: 50px;
+  &__title-one {
     margin-bottom: 70px;
     font-weight: bold;
     font-size: $text-size48;
@@ -10,7 +10,7 @@
     text-transform: uppercase;
   }
 
-  &__header {
+  &__title-two {
     margin-bottom: 40px;
     font-size: $text-size36;
     font-weight: bold;
@@ -19,19 +19,12 @@
 
   &__text {
     @include bold(18px);
-  }
-
-  &__text {
     margin-top: 35px;
   }
 
   &__date {
     margin-top: 20px;
     @include bold(18px);
-
-    &_prefooter-padding {
-    padding-bottom: 50px;
-    }
   }
 
   &__line {
