@@ -3,12 +3,16 @@ body {
   font-family: 'Open Sans Condensed', sans-serif !important;
 }
 
+#bebas-font {
+  font-family: 'Bebas Neue', arial;
+}
+
 h1 {
   margin: 0;
 }
 
 .container {
-  max-width: 1180px;
+  max-width: 1220px;
   margin: 0 auto;
   padding: 0 20px;
 }
@@ -20,4 +24,11 @@ $text-size36: 36px;
 @mixin bold($size) {
   font-size: $size;
   font-weight: bold;
+}
+
+@mixin button ($width, $pad, $bgc, $align) {
+  width: $width;
+  padding: $pad;
+  background-color: $bgc;
+  text-align: $align;
 }

@@ -1,36 +1,31 @@
 .blog {
-  background: #FFE01B;
-  padding: 50px 0;
-
-  &__title-one {
+  background: #F2F2F2;
+  padding-bottom: 54px;
+  
+  &__title {
+    @include bold(55px)
+    line-height: 75px;
     margin-bottom: 70px;
-    font-weight: bold;
-    font-size: $text-size48;
-    line-height: 72px;
+    padding-top: 49px;
     text-transform: uppercase;
   }
 
-  &__title-two {
-    margin-bottom: 40px;
-    font-size: $text-size36;
-    font-weight: bold;
+  &__previews {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__preview {
+    margin-bottom: 30px;
+  }
+
+  &__news-button {
+    @include button(228px, 0, #FFE01B, center); 
+    margin: 30px auto 0 auto;
+    font-size: 24px;
+    line-height: 44px;
+    height: 44px;
     text-transform: uppercase;
-  }
-
-  &__text {
-    @include bold(18px);
-    margin-top: 35px;
-  }
-
-  &__date {
-    margin-top: 20px;
-    @include bold(18px);
-  }
-
-  &__line {
-    margin-bottom: 47px;
-    margin-top: 53px;
-    border: 1px solid #000000;
   }
 }
-

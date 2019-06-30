@@ -2,6 +2,7 @@
   <head>
     <meta charset="UTF-8">
     <title>Блог Александра Филоненко</title>
+    <link href="http://allfont.ru/allfont.css?fonts=bebas-neue" rel="stylesheet" type="text/css" />
     <link rel="stylesheet" href="./main.css">
     <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
     <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,300i,700&display=swap" rel="stylesheet">
@@ -10,38 +11,76 @@
   </head>
   <body>
     @@include('./../components/header.html')
-    <div class="InfoBlock">
+    <div class="phone">
+      <img src="./img/phone2.png">
+    </div>
+    <div class="info-block">
       <div class="container">
-        <div class="infoblock__content">
-          <h1 class="InfoBlock__title">
-            краткая информация обо мне
+        <div class="info-block__content">
+          <h1 class="info-block__title">
+            обо мне
           </h1>
-          <div class="InfoBlock__text">
-            Я увлекаюсь Футбэг фристайлом, катаюсь слалом на роликах и учусь верстать сайты. Читаю книжки, в данный момент Джо Аберкромби.
+          <div class="info-block__my-info">
+            <div class="info-block__pic">
+                <img src="./img/фото.png">
+            </div>
+            <div class="info-block__info">
+              <div class="info-block__text">
+                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio quasi culpa eveniet assumenda quia qui molestiae est ea odio quos voluptatibus perspiciatis, ipsam impedit tempore ducimus omnis deserunt adipisci inventore dicta consectetur, reiciendis fugiat ad! Eum excepturi accusantium amet odio corporis? Odio dignissimos repudiandae vero sapiente voluptatum laboriosam fuga quidem quos, nostrum voluptate, qui recusandae commodi. Aliquid tenetur repellat velit assumenda sapiente aspernatur ratione, error labore pariatur cum architecto debitis odio mollitia unde officiis distinctio quia quam, voluptas quidem quasi dolorum, repudiandae obcaecati. Veniam voluptatibus dolorum iste molestiae repellat officiis quibusdam recusandae sequi cupiditate, sit corrupti! Illo, esse quibusdam?</p>
+              </div>
+              <div class="info-block__button">
+                подробнее
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="my-blog">
+      <div class="container">
+        <div class="my-blog__content">
+          <h1 class="my-blog__title">
+            мой блог
+          </h1>
+          <div class="my-blog__previews">
+            <div class="my-blog__preview">
+              @@include('./../components/preview.html')
+            </div>
+            <div class="my-blog__preview">
+              @@include('./../components/preview.html')
+            </div>
+            <div class="my-blog__preview">
+              @@include('./../components/preview.html')
+            </div>
+          </div>
+          <div class="my-blog__news-button">
+            <a class="my-blog__news-button_link" id="bebas-font" href="./blog.html">Посмотреть все новости</a>
           </div>
         </div>
       </div>
     </div>
     <div class="contacts">
       <div class="container">
-        <div class="contacts__content">
-          <h1 class="contacts__title">
-            контакты
-          </h1>
-          <div class="contacts_links">
-            <div class="contacts__link"> 
-              <a class="contacts__link_white" href="https://vk.com/blizz_tlt">Вконтакте</a> 
-            </div>
-            <div class="contacts__link">
-              <a class="contacts__link_white" href="https://twitter.com/bliztheone"> Twitter</a>
-            </div>
-            <div class="contacts__phone">
-              Тел: 89179508020
-            </div>
+        <h1 class="contacts__title">
+          контакты
+        </h1>
+        <div class="contacts__links">
+          <div class="contacts__link">
+              <img src="./img/VK.png">
+          </div>
+          <div class="contacts__link">
+              <img src="./img/instagram.png">
+          </div>
+          <div class="contacts__link">
+              <img src="./img/phone.png">
+          </div>
+          <div class="contacts__link">
+              <img src="./img/mail.png">
           </div>
         </div>
       </div>
     </div>
+    
     @@include('./../components/footer.html')
   </body>
   <script src="script.js"></script>

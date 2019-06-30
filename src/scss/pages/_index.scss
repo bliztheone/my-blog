@@ -1,56 +1,110 @@
+.phone {
+  position: fixed;
+  right: 75px;
+  bottom: 75px;
+}
 
-.InfoBlock {
-  background: linear-gradient( to top,rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url(./img/Rectangle.png) no-repeat center / cover;
-  color: white;
+.info-block {
+  background: linear-gradient( to top,rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url(./img/Rectangle.png) no-repeat center / cover;
 
   &__title {
+    padding-top: 50px;
+    color: white;
     font-weight: bold;
+    font-size: 55px;
+    line-height: 75px;
     text-transform: uppercase;
-    font-size: $text-size48;
-    line-height: 72px;
-    padding-top: 35px;
+  }
+
+  &__my-info {
+    display: flex;
+    margin-top: 40px;
+    padding-bottom: 70px;
+  }
+
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    margin-left: 20px;
   }
 
   &__text {
+    color:white;
     font-weight: 300;
-    font-size: 48px;
-    line-height: 72px;
-    padding-bottom: 35px;
-    margin-top: 22px;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  &__button {
+    font-size: 24px;
+    text-transform: uppercase;
+    background: #FFE01B;
+    width: 127px;
+    height: 44px;
+    text-align: center;
+    line-height: 44px;
+  }
+}
+
+.my-blog {
+  background: #F2F2F2;
+  padding-bottom: 55px;
+
+  &__title {
+    padding-top: 54px;
+    @include bold(55px);
+    line-height: 75px;
+    text-align: center;
+    text-transform: uppercase;
+  }
+
+  &__previews {
+    margin-top: 40px;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
+
+  &__preview {
+    margin-bottom: 30px;
+  }
+
+  &__news-button {
+    @include button(278px, 13px 0, #FFE01B, center); 
+    margin: 29px auto 0 auto;
+    font-size: 18px;
+    line-height: 24px;
+    height: 44px;
+
+    &_link {
+      text-transform: uppercase;
+      color:black;
+    }
+
+    &_link:hover {
+      color:black;
+      text-decoration: none;
+    }
   }
 }
 
 .contacts {
-  background: #23374F;
-  text-align: center;
+  background: #FFE01B;
 
   &__title {
-    font-weight: bold;
-    font-size: $text-size48;
-    line-height: 72px;
-    padding-top: 33px;
-    margin-bottom: 22px;
     text-transform: uppercase;
+    text-align: center;
+    @include bold(55px);
+    line-height: 75px;
+    padding-top: 33px;
+    margin-bottom: 30px;
   }
 
-  &__content {
-    font-weight: 300;
-    font-size: 48px;
-    line-height: 72px;
-    color:white;
-  }
-
-  &_links {
-    padding-bottom: 33px;
-  }
-
-  &__link_white {
-    color:white;
-  }
-
-  &__link_white:hover {
-    color: white;
+  &__links {
+    display:flex;
+    padding-bottom: 54px;
+    justify-content: space-between;
   }
 }
-
 

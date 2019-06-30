@@ -1,0 +1,59 @@
+.preview {
+  width: 380px;
+  height: 486px;
+  background-color: white;
+  box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.07);
+
+  &__container {
+    max-width: 380px;
+    padding: 0 19px 0 21px;
+  }
+
+  &__pic {
+    width: 380px;
+    height: 185px;
+    background-image: url(./img/картинка.png);
+  }
+
+  &__title {
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 15px;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top:10;
+  }
+
+  &__footer {
+    margin-top: 47px;
+    display: flex;
+    align-items: center;
+  }
+
+  &__link-button {
+    @include button(224px, 0, #FFE01B, center);
+    height: 44px;
+    font-size: 18px;
+    line-height: 44px;
+    color: black;
+    text-transform: uppercase;
+  }
+
+  &__link-button:hover {
+    color:black;
+    text-decoration: none;
+  }
+
+  &__date {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    margin-left: 22px;
+  }
+}

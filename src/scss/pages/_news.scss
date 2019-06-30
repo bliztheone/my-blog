@@ -1,0 +1,48 @@
+.news {
+  background: #F2F2F2;
+  padding-top: 50px;
+  padding-bottom: 57px;
+
+  &__title1 {
+    display: inline;
+    line-height: 75px;
+    @include bold(55px);
+    text-transform: uppercase;
+  }
+
+  &__title-ident {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+  }
+
+  &__title2 {
+    margin: 55px 0 0 0;
+    line-height: 60px;
+    @include bold(44px);
+    text-transform: uppercase;
+  }
+
+  &__image {
+    margin-top: 45px;
+    margin-bottom: 40px;
+  }
+
+  &__text {
+    width: 980px;
+    margin: auto;
+    font-style: normal;
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+
+      &_spacing {
+        margin-top: 52px;
+      }
+  }
+
+    &__date {
+      margin-top: 40px;
+    }
+
+}
