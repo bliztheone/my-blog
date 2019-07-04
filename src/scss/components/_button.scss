@@ -1,0 +1,36 @@
+.button {
+  background-color: #FFE01B;
+  padding: 12px 21px 8px 20px;
+  width: fit-content;
+
+  &_center {
+    display: flex;
+    justify-content: center;
+    margin-top: 30px;
+  }
+
+  &__link {
+    font-family: 'Bebas Neue', sans-serif;
+    color: #000;
+    text-transform: uppercase;
+    font-size: 16px;
+    line-height: 24px;
+
+    &:hover {
+      text-decoration: none;
+      color: #000;
+    }
+  }
+}
+
+.button:hover {
+  background-color: #ECCC00;
+  color:black;
+  text-decoration: none;
+}
+
+.button:active {
+  background-color: #FFEB6C;
+  color:black;
+  text-decoration: none;
+}

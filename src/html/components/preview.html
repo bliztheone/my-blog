@@ -11,7 +11,10 @@
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio quasi culpa eveniet assumenda quia qui molestiae est ea odio quos voluptatibus perspiciatis, ipsam impedit tempore ducimus omnis deserunt adipisci inventore dicta consectetur...
         </div>
         <div class="preview__footer">
-          <a class="preview__link-button" id="bebas-font" href="./news.html">перейти к новости</a>
+          @@include('./../components/button.html', {
+            "text": "перейти к новости",
+            "href": "news.html"
+          })
           <div class="preview__date">
             26.06.2019
           </div>

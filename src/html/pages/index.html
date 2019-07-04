@@ -10,9 +10,6 @@
     </head>
   <body>
     @@include('./../components/header.html')
-    <div class="phone">
-      <img src="./img/5.png">
-    </div>
     <div class="info-block">
       <div class="container">
         <div class="info-block__content">
@@ -27,9 +24,10 @@
               <div class="info-block__text">
                 <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illum distinctio quasi culpa eveniet assumenda quia qui molestiae est ea odio quos voluptatibus perspiciatis, ipsam impedit tempore ducimus omnis deserunt adipisci inventore dicta consectetur, reiciendis fugiat ad! Eum excepturi accusantium amet odio corporis? Odio dignissimos repudiandae vero sapiente voluptatum laboriosam fuga quidem quos, nostrum voluptate, qui recusandae commodi. Aliquid tenetur repellat velit assumenda sapiente aspernatur ratione, error labore pariatur cum architecto debitis odio mollitia unde officiis distinctio quia quam, voluptas quidem quasi dolorum, repudiandae obcaecati. Veniam voluptatibus dolorum iste molestiae repellat officiis quibusdam recusandae sequi cupiditate, sit corrupti! Illo, esse quibusdam?</p>
               </div>
-              <div class="info-block__button">
-                подробнее
-              </div>
+              @@include('./../components/button.html', {
+                "text": "подробнее",
+                "href": "#"
+              })
             </div>
           </div>
         </div>
@@ -52,9 +50,11 @@
               @@include('./../components/preview.html')
             </div>
           </div>
-          <div class="my-blog__news-button">
-            <a class="my-blog__news-button_link" id="bebas-font" href="./blog.html">Посмотреть все новости</a>
-          </div>
+          @@include('./../components/button.html', {
+            "text": "посмотреть все новости",
+            "href": "blog.html",
+            "class": "button_center"
+          })
         </div>
       </div>
     </div>
@@ -65,20 +65,44 @@
         </h1>
         <div class="contacts__links">
           <div class="contacts__link">
-              <img src="./img/VK.png">
+            <div class="contacts__logo">
+              <img src="./img/0.png" >
+            </div>
+            <div class="contacts__hidden-text">
+              перейти в vk
+            </div>
           </div>
           <div class="contacts__link">
-              <img src="./img/1.png">
+            <div class="contacts__logo">
+              <img src="./img/1.png" >
+            </div>
+            <div class="contacts__hidden-text">
+              instagram
+            </div>
           </div>
           <div class="contacts__link">
-              <img src="./img/3.png">
-          </div>
-          <div class="contacts__link">
+            <div class="contacts__logo">
               <img src="./img/2.png">
+            </div>
+            <div class="contacts__hidden-text">
+              позвонить
+            </div>
           </div>
+            <div class="contacts__link">
+              <div class="contacts__logo">
+                <img src="./img/3.png">
+              </div>
+              <div class="contacts__hidden-text">
+                почта
+              </div>
+            </div>
         </div>
       </div>
-    </div>    
+    </div>   
+    <div class="phone">
+      <div class="phone__background"></div>
+      <img src="./img/6.png">
+    </div> 
     @@include('./../components/footer.html')
   </body>
   <script src="script.js"></script>
