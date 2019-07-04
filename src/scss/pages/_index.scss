@@ -32,8 +32,6 @@
   &__text {
     color:white;
     font-weight: 300;
-    font-size: 20px;
-    line-height: 27px;
   }
 
   &__button {
@@ -60,14 +58,15 @@
   }
 
   &__previews {
-    margin-top: 40px;
+    margin: 40px -10px 0 -10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
   &__preview {
-    margin-bottom: 30px;
+    margin: 0 10px 30px 10px;
+    
   }
 
   &__news-button {
@@ -97,7 +96,7 @@
     text-align: center;
     @include bold(55px);
     line-height: 75px;
-    padding-top: 33px;
+    padding-top: 30px;
     margin-bottom: 30px;
   }
 
@@ -105,6 +104,11 @@
     display:flex;
     padding-bottom: 54px;
     justify-content: space-between;
+    margin: 0 -10px;
+  }
+
+  &__link {
+    margin: 0 10px;
   }
 }
 

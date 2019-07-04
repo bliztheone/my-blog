@@ -11,13 +11,14 @@
   }
 
   &__previews {
+    margin: 0 -10px;
     display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
   }
 
   &__preview {
-    margin-bottom: 30px;
+    margin: 0 10px 30px 10px;
   }
 
   &__news-button {

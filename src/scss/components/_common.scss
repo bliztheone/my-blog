@@ -1,5 +1,11 @@
+// //Open Sans Condensed
+// @import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap&subset=cyrillic');
+// // Bebas Neue
+// @import url('http://allfont.ru/allfont.css?fonts=bebas-neue');
 
 body {
+  font-size: 20px !important;
+  line-height: 27px !important;
   font-family: 'Open Sans Condensed', sans-serif !important;
 }
 
@@ -15,6 +21,11 @@ h1 {
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 20px;
+}
+
+.row {
+  display: flex;
+  margin: 0 -10px;
 }
 
 $text-size48: 48px;
