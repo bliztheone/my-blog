@@ -1,0 +1,28 @@
+.phone {
+    border-radius:50%;
+    position: fixed;
+    right: 75px;
+    bottom: 75px; 
+  }
+  
+  
+  @keyframes spin {
+    from { transform: rotate(0),;}
+    20% { transform: rotate(0);}
+    30% { transform: rotate(10deg);}
+    40%  { transform: rotate(-10deg);} 41% { transform:scale(1.04);}
+    50% { transform: rotate(10deg);} 51% { transform:scale(1);}
+    60%  { transform: rotate(-10deg);} 61% { transform:scale(1.05); }
+    100% { transform: rotate(0);}
+  }
+  
+  @keyframes pulse {
+    from { box-shadow: 0 0 0 0px rgba(255, 0, 0, 0.8); }
+    80% { box-shadow: 0 0 0 60px rgba(255, 0, 0, 0.1);}
+    100% { box-shadow: 0 0 0 60px rgba(255, 0, 0, 0);}
+  }
+  
+  .phone {
+    animation: pulse 2s infinite, spin 1s infinite; 
+  }
+  

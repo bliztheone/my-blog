@@ -1,0 +1,80 @@
+.my-info {
+  background: #F2F2F2;
+  padding-bottom: 55px;
+
+  &__title {
+    @include bold(55px);
+    padding-top: 70px;
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__info {
+    margin-bottom: 70px;
+    margin-top: 65px;
+    display: flex;
+  }
+
+  &__header-text {
+    margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+  }
+
+  &__title2 {
+    @include bold(45px);
+    text-align: left;
+    text-transform: uppercase;
+  }
+
+  &__text {
+    font-weight: 300;
+    font-size: 20px;
+    line-height: 27px;
+    margin-top: 9px;
+  }
+
+  &__decoration {
+    display: flex;
+    align-items: center;
+  }
+
+  &__decoration-text {
+    @include bold(24px);
+    line-height: 33px;
+    margin: 0 18px;
+    text-transform: uppercase;
+  }
+
+  &__tlt-pic {
+    background-image: url(./img/sprite.png);
+    width: 71px;
+    height: 71px;
+  }
+
+  &__pc-pic {
+    background-image: url(./img/sprite.png);
+    width: 71px;
+    height: 71px;
+    background-position: (-71 top);
+  }
+
+  &__calendar-pic {
+    background-image: url(./img/sprite.png);
+    width: 71px;
+    height: 71px;
+    background-position: (-142 top);
+  }
+
+  &__photos {
+    margin: 0 -10px;
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  &__button {
+    margin-top: 40px;
+  }
+  
+}

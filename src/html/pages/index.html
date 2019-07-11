@@ -16,7 +16,7 @@
           <h1 class="info-block__title">
             обо мне
           </h1>
-          <div class="info-block__my-info">
+          <section class="info-block__my-info">
             <div class="info-block__pic">
                 <img src="./img/фото.png">
             </div>
@@ -29,7 +29,7 @@
                 "href": "#"
               })
             </div>
-          </div>
+          </section>
         </div>
       </div>
     </div>
@@ -66,7 +66,7 @@
         <div class="contacts__links">
           <div class="contacts__link">
             <div class="contacts__logo">
-              <img src="./img/0.png" >
+              <div class="contacts__vk-logo"></div>
             </div>
             <div class="contacts__hidden-text">
               перейти в vk
@@ -74,7 +74,7 @@
           </div>
           <div class="contacts__link">
             <div class="contacts__logo">
-              <img src="./img/1.png" >
+              <div class="contacts__insta-logo"></div>
             </div>
             <div class="contacts__hidden-text">
               instagram
@@ -82,7 +82,7 @@
           </div>
           <div class="contacts__link">
             <div class="contacts__logo">
-              <img src="./img/2.png">
+              <div class="contacts__phone-logo"></div>
             </div>
             <div class="contacts__hidden-text">
               позвонить
@@ -90,7 +90,7 @@
           </div>
             <div class="contacts__link">
               <div class="contacts__logo">
-                <img src="./img/3.png">
+                <div class="contacts__mail-logo"></div>
               </div>
               <div class="contacts__hidden-text">
                 почта
@@ -99,10 +99,7 @@
         </div>
       </div>
     </div>   
-    <div class="phone">
-      <div class="phone__background"></div>
-      <img src="./img/6.png">
-    </div> 
+    @@include('./../components/phone.html')
     @@include('./../components/footer.html')
   </body>
   <script src="script.js"></script>
