@@ -1,25 +1,43 @@
 .preview {
-  width: 380px;
-  height: 486px;
+  max-width: 380px;
+  // min-height: 486px;
   background-color: white;
   box-shadow: 5px 5px 20px rgba(0, 0, 0, 0.07);
+
+  @media (max-width: 768px) and (min-width: 320px) {
+    font-size: 18px;
+    line-height: 25px;
+  }
+
+  @media (max-width: 320px) {
+    font-size: 16px;
+    line-height: 22px;
+  }
 
   &__container {
     max-width: 380px;
     padding: 0 19px 0 21px;
+
+    @media (max-width: 768px) and (min-width: 320px) {
+      padding: 0 17px 0 19px;
+    }
+    
+    @media (max-width: 320px) {
+      padding: 0 20px 0 20px;
+    }
   }
 
   &__pic {
-    width: 380px;
+    max-width: 380px;
     height: 185px;
-    background-image: url(./img/картинка.png);
+    background: url(./img/картинка.png) no-repeat center / cover;
   }
 
   &__title {
     font-weight: bold;
     margin-top: 15px;
     text-transform: uppercase;
-  }
+    }
 
   &__text {
     margin-top:10;
@@ -29,6 +47,7 @@
     margin-top: 47px;
     display: flex;
     align-items: center;
+    padding-bottom: 20px;
   }
 
   &__link-button {
@@ -45,8 +64,23 @@
     text-decoration: none;
   }
 
+  &__button {
+    @media (max-width: 320px) {
+      width: 154px;
+    }
+  }
+
   &__date {
-    font-weight: 300;
     margin-left: 22px;
+    @media (max-width: 768px) and (min-width: 320px) {
+      margin-left: 14px;
+    }
+    
+    @media (max-width: 320px) {
+      margin-left: 18px;
+    }
   }
 }
+
+
+

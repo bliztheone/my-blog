@@ -9,12 +9,32 @@
     font-size: 55px;
     line-height: 75px;
     text-transform: uppercase;
+    @media (max-width: 769px) and (min-width: 321px) {
+      @include bold(45px);
+      line-height: 61px;
+      padding-top: 29px;
+    }
+    @media (max-width: 320px) {
+      font-size: 30px;
+      line-height: 41px;
+      padding-top: 28px;
+    }
   }
 
   &__my-info {
-    display: flex;
+    display: grid;
+    grid-template-columns: 3fr 9fr;
     margin-top: 40px;
     padding-bottom: 70px;
+    @media (max-width: 769px) and (min-width: 321px) {
+      margin-top: 30px;
+      padding-bottom: 50px;
+    }
+    @media (max-width: 541px) {
+      margin-top: 20px;
+      display: block;
+      padding-bottom: 40px;
+    }
   }
 
   &__info {
@@ -22,11 +42,34 @@
     justify-content: space-between;
     flex-direction: column;
     margin-left: 20px;
+    @media (max-width: 541px) {
+      margin-left: 0px;
+      display: block;
+    }
+  }
+
+  &__pic {
+    background: url(./img/фото.png) no-repeat center / cover;
+    max-width: 280px;
+    height: 265px;
+    @media (max-width: 541px) {
+      margin: 0 auto;
+    }
+    
   }
 
   &__text {
     color:white;
     font-weight: 300;
+    @media (max-width: 769px) and (min-width: 541px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media (max-width: 320px) {
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 25px;
+    }
   }
 
   &__button {
@@ -43,6 +86,14 @@
 .my-blog {
   background: #F2F2F2;
   padding-bottom: 55px;
+  
+  @media (max-width: 769px) and (min-width: 541px) {
+    padding-bottom: 40px;
+  }
+  
+  @media (max-width: 769px) {
+    padding-bottom: 20px;
+  }
 
   &__title {
     padding-top: 54px;
@@ -50,18 +101,34 @@
     line-height: 75px;
     text-align: center;
     text-transform: uppercase;
+    @media (max-width: 769px) and (min-width: 321px) {
+      font-size: 30px;
+      line-height: 61px;
+      padding-top: 29px;
+    }
+    @media (max-width: 320px) {
+      font-size: 30px;
+      line-height: 41px;
+      padding-top: 28px;
+    }
   }
 
   &__previews {
-    margin: 40px -10px 0 -10px;
-    display: flex;
-    justify-content: space-between;
-    flex-wrap: wrap;
-  }
-
-  &__preview {
-    margin: 0 10px 30px 10px;
+    margin-top: 40px;
+    display: grid;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr;
+    
+    @media (max-width: 769px) and (min-width: 541px) {
+      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
     }
+    @media (max-width: 540px) {
+      margin-top: 20px;
+      display: block;
+    }
+  }
 }
 
 .contacts {
@@ -74,28 +141,48 @@
     line-height: 75px;
     padding-top: 30px;
     margin-bottom: 30px;
+
+    @media (max-width: 769px) and (min-width: 321px) {
+      @include bold(45px);
+      line-height: 61px;
+      padding-top: 29px;
+    }
+    
+    @media (max-width: 320px) {
+      font-size: 30px;
+      line-height: 41px;
+      padding-top: 28px;
+      margin-bottom: 20px;
+    }
   }
 
   &__links {
-    display:flex;
+    display:grid;
+    justify-content: center;
+    grid-gap: 20px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
     padding-bottom: 54px;
-    justify-content: space-between;
-    margin: 0 -10px;
+    
+    @media (max-width: 1180px) and (min-width: 321px) {
+      padding-bottom: 40px;
+      display: grid;
+      grid-template-columns: fit-content(280px) fit-content(280px);
+    }
+    @media (max-width: 600px) {
+      padding-bottom: 25px;
+      display: grid;
+      grid-template-columns: fit-content(280px);
+    }
   }
 
   &__link {
     transition: all 300ms;
     text-align: center;
-    margin: 0 10px;
     width: 280px;
-    height: 171px;
+    height: 150px;
     background: #343434;
     transition: transform 500ms;
   }
-
-  // &__link:hover {
-  //   transform: scale(1.1);
-  // }
 
   &__link:hover .contacts__hidden-text {
     opacity: 1;
@@ -108,35 +195,35 @@
   &__logo {
     transition: all 500ms;
     position: absolute;
-    margin: 2.5em 4.5em;
+    margin: 2em 4.5em;
     }
 
     &__vk-logo {
       background-image: url(./img/1spr.png);
       width: 110px;
       height: 110px;
-      background-position: (-7 bottom);
+      background-position: (-5 bottom);
     }
 
     &__insta-logo {
       background-image: url(./img/1spr.png);
       width: 110px;
       height: 110px;
-      background-position: (-117 bottom);
+      background-position: (-115 bottom);
     }
 
     &__phone-logo {
       background-image: url(./img/1spr.png);
       width: 110px;
       height: 110px;
-      background-position: (-227 bottom);
+      background-position: (-225 bottom);
     }
 
     &__mail-logo {
       background-image: url(./img/1spr.png);
       width: 110px;
       height: 110px;
-      background-position: (-337 bottom);
+      background-position: (-335 bottom);
     }
 
   &__hidden-text {
@@ -144,7 +231,7 @@
     @include bold(25);
     color: white;
     opacity: 0;
-    padding-top: 4.5em; 
+    padding-top: 4em; 
     transition: opacity 600ms;
   } 
 }
@@ -175,6 +262,9 @@
 
 .phone {
   animation: pulse 2s infinite, spin 1s infinite; 
+  @media (max-width: 768px) {
+    display: none;
+  }
 }
 
 

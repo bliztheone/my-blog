@@ -1,5 +1,6 @@
 <html lang="ru">
   <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Блог Александра Филоненко</title>
     <link href="http://allfont.ru/allfont.css?fonts=bebas-neue" rel="stylesheet" type="text/css" />
@@ -18,7 +19,6 @@
           </h1>
           <section class="info-block__my-info">
             <div class="info-block__pic">
-                <img src="./img/фото.png">
             </div>
             <div class="info-block__info">
               <div class="info-block__text">
@@ -41,13 +41,13 @@
           </h1>
           <div class="my-blog__previews">
             <div class="my-blog__preview">
-              @@include('./../components/preview.html')
+              @@include('./../components/preview.html')              
             </div>
-            <div class="my-blog__preview">
-              @@include('./../components/preview.html')
+            <div class="my-blog__preview" id="hide1">
+                @@include('./../components/preview.html')
             </div>
-            <div class="my-blog__preview">
-              @@include('./../components/preview.html')
+            <div class="my-blog__preview" id="hide2">
+                @@include('./../components/preview.html')
             </div>
           </div>
           @@include('./../components/button.html', {

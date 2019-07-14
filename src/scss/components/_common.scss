@@ -21,6 +21,9 @@ h1 {
   max-width: 1220px;
   margin: 0 auto;
   padding: 0 20px;
+  @media (max-width: 769px) and (min-width: 321px) {
+    padding: 0 34px;
+  }
 }
 
 .row {
@@ -42,4 +45,16 @@ $text-size36: 36px;
   padding: $pad;
   background-color: $bgc;
   text-align: $align;
+}
+
+#hide1 { display: block;
+  @media (max-width: 768px) {
+    display: none;
+  }
+}
+
+#hide2 {display: block;
+  @media (max-width: 541px) {
+    display: none;
+  }
 }

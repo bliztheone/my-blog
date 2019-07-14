@@ -2,11 +2,29 @@
   background: #FFFFFF;
   font-size: 16px;
 
+  @media (max-width: 430px) {
+    font-size: 14px;
+    line-height: 19px;
+  }
+
   &__content-box {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 34px 0;
+    @media (max-width: 769px) and (min-width: 431px) {
+      padding: 19px 0;
+    }
+    @media (max-width: 430px) {
+      display: block;
+      padding: 9px 0 8px 0;
+    }
+  }
+
+  &__copyright {
+    @media (max-width: 430px) {
+      margin-top: 10px;
+    }
   }
 
   &__link {
