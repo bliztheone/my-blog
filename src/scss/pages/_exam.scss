@@ -8,15 +8,30 @@ body.exam-site {
   height: 5px;
   background: #056CDE;
   border-radius: 10px;
+  
+  @media (max-width: 769px) {
+    width: 80px;
+    height: 3px;
+  }
 }
 
 .new-header {
   padding-top: 40px;
+
+  &__container {
+    max-width: 1220px;
+    margin: 0 auto;
+    padding: 0 20px 0 120px;    
+    @media (max-width: 769px) and (min-width: 640px) {
+      padding: 0 80px 0 94px;
+    }
+  }
   
   &__content {
     display: flex;
     justify-content: space-between;
   }
+
   &__links {
     display: flex;
     align-items: center;
@@ -27,12 +42,33 @@ body.exam-site {
     width: 223px;
     height: 68px;
     margin-right: 49px;
-  }
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      transform: scale(0.7); 
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      margin-top: -3px;
+    }
+    
+    @media (max-width: 639px) {
+      transform: scale(0.6);
+      position: absolute;
+      left: 0px;
+      top: 0px;
+      margin-top: -3px;
+      margin-left: -23px;
+    }
+  }  
 
   &__link {
     margin-left: 30px;
     font-size: 12px;
     text-transform: uppercase;
+    
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 
   &__contacts {
@@ -46,48 +82,135 @@ body.exam-site {
     font-size: 16px;
     line-height: 22px;
     margin-right: 30px;
+    
+    @media (max-width: 1023px) {
+      display: none;
+    }
   }
 
   &__button {
     @include exam-button1();
+    
+    @media (max-width: 1023px) {
+      display: none;
+    }
+  }
+
+  &__hidden-nav {
+    background: url(./img/header-nav.png);
+    width: 26px;
+    height: 18px;
+    z-index: 12;
+
+    @media (min-width: 1024px) {
+      display: none;
+    }
+    
+    @media (max-width: 1023px) and (min-width: 640px) {
+      padding-right: 20px;
+      margin-top: -20px;
+    }
+
+    @media (max-width: 639px) {
+      margin-top: -20px;
+    }
   }
 }
 
 .company { 
-  padding-left: 50px;
-  margin-top: 35px;
+  margin-top: 50px;
+  
+  @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 20px;
+  }
+  @media (max-width: 639px) {
+    margin-top: 55px;
+  }
+
 
   &__container {
-    max-width: 1070px;
+    max-width: 1220px;
     margin: 0 auto;
-    padding: 0 20px;
+    padding: 0 20px 0 120px;
     display: grid;
+    grid-gap: 30px;
     grid-template-columns: 1fr 1fr;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      padding: 0 39px 0 94px;
+    }
+
+    @media (max-width: 639px)  {
+      padding: 0 20px;
+      margin: 0 auto;
+      display: block;
+    }
   }
 
   &__info {
-    padding-top: 40px;
+    padding-top: 30px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+    
+    }
+    @media (max-width: 639px) {
+      padding-top: 65px;
+    }
   }
 
   &__title {
     @include title-font (58, 67);
-  }
+    z-index: 12;  
+
+    @media (max-width: 1000px) and (min-width: 640px) {
+      @include title-font (28, 32);
+    }
+
+    @media (max-width: 639px) {
+      @include title-font (28, 32);
+      position: absolute; 
+    }
+   }
 
   &__text {
     font-size: 19px;
     line-height: 29px;
     margin-top: 30px;
+    letter-spacing: 0.3px;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      font-size: 15px;
+      line-height: 25px;
+      margin-top: 20px;
+    }
+    
+    @media (max-width: 639px) {
+      font-size: 15px;
+      line-height: 25px;
+      margin-top: 125px;
+    }
   }
 
   &__button {
     margin-top: 18px;
     display: inline-block;
     @include exam-button2();
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 5px;
+    }
+    @media (max-width: 639px) {
+      margin-top: 0;
+    }
   }
   
   &__links {
     margin-top: 105px;
     display: flex;
+    
+    @media (max-width: 769px) {
+    display: none;
+    }  
   }
   
   &__p-link {
@@ -110,88 +233,225 @@ body.exam-site {
   }
   
   &__image {
-    position: relative;
-    left: 38px;
+    max-width: 560px;
+    height: 653px;    
+    background: url(./img/exam1.png) no-repeat / contain;
+    
+    @media (max-width: 1000px) and (min-width: 640px) {
+      max-width: 330px;
+      max-height: 395px;
+      margin-top: 35px;
+    }
+
+    @media (max-width: 400px)  {
+      display: none;
+    }
+  }
+
+  &__phone-image {
+    @media (max-width: 400px)  {
+      background: url(./img/1ph.png) no-repeat / contain;
+      position: absolute;
+      width: 189px;  
+      height: 220px;        
+      right: 0px; 
+      top: 29px;        
+      z-index: 1;
+    }
   }
 }
 
+
 .pain-treatment {
-  margin-top: 86px;
+  margin-top: 50px;
+  
+  @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 10px;
+  }
+
+  @media (max-width: 639px) {
+    display: none;
+  }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 20px;
+
+    @media (max-width: 639px) {
+      display: block;
+    }
   }
 
   &__img {
     box-shadow: 0px 4px 60px rgba(118, 157, 202, 0.15);
     border-radius: 10px;
-    width: 540px;
+    max-width: 540px;
     height: 440px;
-    background: url(./img/2rectangle.png);
+    background: url(./img/2rectangle.png) no-repeat center / cover;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+    max-width: 320px;
+    max-height: 260px;
+    }
+    @media (max-width: 639px) {}
   }
 
   &__border {
     margin-top: 80px;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 40px;
+    }
+    
+    @media (max-width: 639px) {}
   }
 
   &__title {
     @include title-font (38, 44);
+    
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+    @include title-font (22, 25);
+    letter-spacing: 0.2px;
+    }
+    
+    @media (max-width: 639px) {}
   }
 
   &__text {
     font-size: 19px;
     line-height: 29px;
     margin-top: 20px;
+    letter-spacing: 0.4px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      font-size: 15px;
+      line-height: 24px;
+    }
+    @media (max-width: 639px) {}
   }
 
   &__button {
     @include exam-button1();
     margin-top: 35px;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      margin-top: 25px;
+    }
+    @media (max-width: 639px) {}
+
   }
 }
 
 .services {
   padding-right: 70px;
   margin-top: 100px;
+
+  @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 75px;
+  }
+
+  @media (max-width: 639px) {
+    margin-top: 45px;
+    padding: 0;
+  }
   
   &__container {
-    max-width: 950px;
+    max-width: 1220px;
     margin:0 auto;
-    padding: 0 20px;
+    padding: 0 105px 0 145px;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      padding: 0 35px 0 95px; 
+    }
+
+    @media (max-width: 639px)  {
+      padding: 0 20px;
+      margin: 0 auto;
+    }
   }
 
   &__title {
     @include title-font (38, 44);
     margin-bottom: 40px;
+
+    @media (max-width: 769px) {
+      @include title-font (22, 25);
+      margin-bottom: 30px;
+      letter-spacing: 0px;
+    }   
+
+    @media (max-width: 639px) {
+      margin-bottom: 20px;
+    }
   }
 
   &__cards {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 50px;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      grid-gap: 30px;
+    }
+
+    @media (max-width: 639px) {
+      display: block;
+    }
   }
 
-  &__card {
+  &__card2 {
     position: relative;
-    top: 154px;
+    top: 155px;   
     
+    @media (max-width: 639px) {
+      position: static;
+    }
+  }
+
+  &__card3 {
+    @media (max-width: 769px) and (min-width: 640px) {
+     
+    }
   }
 }
 
-.advantages {
-  padding-right: 70px;
-  margin-top: 100px;
+.advantages {  
+  margin-top: 80px;
+
+  @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 20px;
+  }
+
+  @media (max-width: 639px) {
+    margin-top: 55px;
+  }
 
   &__container {
-    max-width: 950px;
-    margin:0 auto;
-    padding: 0 20px;
+    max-width: 1220px;
+    margin:0 0px 0 120px;
+    padding: 0 20px 0 20px;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      padding: 0 35px 0 95px; 
+      margin: 0;
+    }
+
+    @media (max-width: 639px)  {
+      padding: 0 20px;
+      margin: 0 auto;
+    }
   }
 
   &__title {
     @include title-font (38, 44);
+
+    @media (max-width: 769px) {
+      @include title-font (22, 25);
+      margin-bottom: 20px;
+      letter-spacing: 0px;
+    }
   }
 
   &__text {
@@ -199,32 +459,157 @@ body.exam-site {
     font-size: 19px;
     line-height: 29px;
     margin-top: 20px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      font-size: 15px;
+      line-height: 24px;
+      width: 460px;
+    }
+
+    @media (max-width: 639px) {
+      display: none;
+    }
   }
 
   &__cards {
     margin-top: 40px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    grid-gap: 50px;
+    grid-row-gap: 50px;
+        
+    @media (max-width: 900px) and (min-width: 640px) {
+      grid-row-gap: 45px;
+    }
+
+    @media (max-width: 639px) {
+      display: none;
+    }
   }
+
+    &__card_margin {
+      margin-left: -55px; 
+      @media (max-width: 900px) and (min-width: 640px) {
+        margin-left: -25px; 
+      }         
+    }
+
+    &__phone-card {
+      
+      @media (min-width: 640px) {
+        display: none;
+      } 
+
+      margin-bottom: 15px;
+      display: flex; 
+      justify-content: space-between;         
+    }
+
+    &__phonecard-content {
+      margin-top: -6px;
+    }
+
+    &__phonecard-title {
+      @include title-font (14, 17);
+      margin-bottom: 5px;
+      width: 210px;
+      letter-spacing: 0px;
+    }
+
+    &__phonecard-text {
+      font-size: 14px;
+      width: 210px;
+      line-height: 21px;
+    }
+
+    &__phonecard-img1 {
+      background: url(./img/1ad.png) no-repeat center / cover;
+      height: 50px;
+      width: 50px;
+    }
+
+    &__phonecard-img2 {
+      background: url(./img/3ad.png) no-repeat center / cover;
+      height: 50px;
+      width: 50px;
+    }
+
+    &__phonecard-img3 {
+      background: url(./img/2ad.png) no-repeat center / cover;
+      height: 50px;
+      width: 50px;
+    }
+
+    &__phonecard-img4 {
+      background: url(./img/4ad.png) no-repeat center / cover;
+      height: 50px;
+      width: 50px;
+    }
+  
 }
 
 .doctor {
   margin-top: 115px;
 
+  @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 60px;
+  }
+
+  @media (max-width: 640px) {
+    margin-top: 55px;
+  } 
+
+  &__img {
+    background: url(./img/4ex.png) no-repeat center / contain;
+    max-width: 540px;
+    height: 367px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      max-width: 320px;
+      height: 250px;
+    }
+
+    @media (max-width: 640px) {
+      width: 100%;
+      height: 190px;
+    } 
+  }
+
+  &__info {
+    @media (max-width: 769px) and (min-width: 640px) {
+      margin-left: 5px;
+    }
+  }
 
   &__content {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-gap: 10px;
+
+    @media (max-width: 640px) {
+      display: block;
+    } 
   }
 
   &__border {
     margin-top: 30px;
+
+    @media (max-width: 640px) {
+      margin-top: 22px;
+    }     
   }
 
   &__title {
     @include title-font (38, 44);
+
+    @media (max-width: 769px) {
+      @include title-font (22, 25);
+      margin-bottom: 20px;
+      letter-spacing: 0px;      
+    }
+
+    @media (max-width: 640px) {
+      margin-bottom: 15px;
+    } 
   }
 
   &__text {
@@ -232,25 +617,84 @@ body.exam-site {
     margin-top: 20px;
     font-size: 19px;
     line-height: 29px;
+
+    @media (max-width: 769px) {
+      margin-top: 0px;
+      font-size: 16px;
+      line-height: 25px;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    } 
+  }
+
+  &__phone-text {
+    font-size: 16px;
+    line-height: 25px;
+    margin-bottom: 11px;
+
+    @media (min-width: 639px) {
+      display: none;
+    }
+  }
+
+  &__phone-view {
+    font-size: 11px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #056CDE;
   }
 }
 
 .testimonials {
   padding-right: 70px;
-  margin-top: 90px;
+  margin-top: 70px;
 
-  &__container {
-    max-width: 950px;
-    margin:0 auto;
-    padding: 0 20px;
+  @media (max-width: 769px) and (min-width: 640px) {
+    padding-right: 0; 
+    margin-top: 35px;
   }
 
-  &__border {
+  @media (max-width: 640px) {
+    margin-top: 50px;
+    padding-right: 0px;
+  }   
 
+  &__container {
+    max-width: 1220px;
+    margin:0 0px 0 120px;
+    padding: 0 20px 0 20px;
+    
+    @media (max-width: 769px) and (min-width: 640px) {
+      padding: 0 85px 0 95px; 
+      margin: 0;
+    }
+
+    @media (max-width: 639px)  {
+      padding: 0 20px;
+      margin: 0 auto;
+    }
   }
 
   &__title {
     @include title-font (38, 44);
+
+    @media (max-width: 769px) {
+      @include title-font (22, 25);
+      margin-bottom: 20px;
+      letter-spacing: 0px;
+    }    
+  }
+
+  &__pic {
+    width: 127px;
+    height: 97px;
+    background: url(./img/1tes.png) no-repeat center / cover;
+    
+    @media (max-width: 1000px) {
+      display: none;
+    }
   }
 
   &__info {
@@ -258,29 +702,95 @@ body.exam-site {
     display: grid;
     grid-template-columns: 1fr 2fr 2fr;
     grid-gap: 40px;
+
+    @media (max-width: 1000px) and (min-width: 640px) {
+      grid-template-columns: 1fr 1fr;
+      margin-top: 30px;
+      grid-gap: 30px;
+    }
+
+    @media (max-width: 640px) {
+      display: block;
+    } 
   }
 
   &__slide1 {
     margin-left: 30px;
+
+    @media (max-width: 1000px) and (min-width: 640px) {
+      margin-left: 0;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    } 
+  }
+
+  &__slide2 {
+    @media (max-width: 639px)  {
+      display: none;
+    }
   }
 
   &__slide {
     background: #D5E9FF;
-    // box-shadow: 0px 0px 20px rgba(118, 157, 202, 0.15);
+    box-shadow: 0px 0px 20px rgba(118, 157, 202, 0.15);
     border-radius: 10px;
-    width: 360px;
+    max-width: 360px;
     height: 360px;
+
+    @media (max-width: 1000px) and (min-width: 640px) {
+      height: 290px;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    } 
+  }
+
+  &__phone-slide {
+    background: #D5E9FF;
+    box-shadow: 0px 0px 20px rgba(118, 157, 202, 0.15);
+    border-radius: 10px;
+    width: 100%;
+    height: 294px;    
+
+    @media (min-width: 640px) {
+      display: none;
+    } 
+  }
+
+  &__star {
+    margin-top: 10px;    
   }
 
   &__slide-container {
-    width: 360px;
+    max-width: 360px;
     padding: 40px 40px 0 40px;
+
+    @media (max-width: 1000px) and (min-width: 640px) {
+      padding: 30px 20px 0 20px;
+    }
+
+    @media (max-width: 640px) {
+      padding: 0 20px;
+    } 
   }
 
   &__text {
     margin-top: 20px;
     font-size: 17px;
     line-height: 26px;
+    
+    @media (max-width: 1000px) {
+      font-size: 14px;
+      line-height: 21px;
+    } 
+    
+    @media (max-width: 640px) {
+      margin-top: 15px;
+      letter-spacing: 0.3px;
+    } 
   }
 
   &__view {
@@ -288,6 +798,16 @@ body.exam-site {
     font-size: 15px;
     line-height: 18px;
     margin-top: 8px;
+    text-transform: uppercase;
+
+    @media (max-width: 1000px) {
+      font-size: 10px;
+      line-height: 15px;      
+    }
+
+    @media (max-width: 640px) {
+      margin-top: 0px;
+    } 
   }
 
   &__author {
@@ -295,16 +815,49 @@ body.exam-site {
     font-size: 18px;
     line-height: 29px;
     margin-top: 20px;
+
+    @media (max-width: 1000px) and (min-width: 640px) {
+      font-size: 16px;
+      line-height: 28px;
+      margin-top: 10px;
+    }
+
+    @media (max-width: 640px) {
+      margin-top: 7px;
+    } 
   }
 
   &__slider-nav {
+    background: url(./img/7tes.png) no-repeat center / contain;
     margin-top: 40px;
-    padding-left: 200px;
-  }
+    margin-left: 200px;
+    max-width: 760px;
+    height: 16px;
+    
+    @media (max-width: 1000px) and (min-width: 640px) {
+      width: 100%;
+      margin: 30px 0 0 0;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    } 
+  }  
+
+  &__hidden-nav {
+
+    @media (min-width: 640px) {
+      display: none;
+    }     
+
+    margin: 29px auto 0 auto;
+    width: 50px;
+    height: 8px;
+    background: url(./img/4tes.png) no-repeat center / contain;
+  }  
 }
 
-.exam-contacts {
-  
+.exam-contacts {  
   
   &__mail-pic {
     position: absolute;
@@ -315,23 +868,63 @@ body.exam-site {
     background: url(./img/2sprite.svg);
     background-position: 0 -269px;
     z-index: 12;
+
+    @media (max-width: 769px) and (min-width: 640px) {      
+      transform: scale(0.7);
+      margin-top: -43px;
+      margin-left: 25px;
+    }    
+
+    @media (max-width: 640px) {
+      transform: scale(0.55);
+      margin-top: -43px;
+      margin-left: -25px;
+    }
   }
 
   &__content {
+    max-width: 1180px;
     margin-top: 125px;
     height: 440px;
     background: #FFCE51;
-    border-radius: 10px 10px 0px 0px;       
+    border-radius: 10px 10px 0px 0px;  
+    
+    @media (max-width: 769px) and (min-width: 640px) {      
+      margin-top: 95px;
+      height: 333px;
+    }
+
+    @media (max-width: 640px) {
+      margin-top: 59px;
+      height: 268px;
+    }
   }
   
   &__container {
     max-width: 580px;
     margin: 0 auto;  
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      padding: 0 0 0 180px;
+    }
+
+    @media (max-width: 640px) {
+      padding: 0 20px;
+    } 
   }
 
   &__title {
     padding-top: 60px;
     @include title-font (58, 67);
+
+    @media (max-width: 769px) {
+      @include title-font (28, 32);
+      padding-top: 30px;
+    }
+
+    @media (max-width: 640px) {
+      padding-top: 65px;
+    } 
   }
 
   &__text {
@@ -339,6 +932,15 @@ body.exam-site {
     font-size: 18px;
     line-height: 29px;
     letter-spacing: 0.3px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      font-size: 15px;
+      line-height: 25px;
+    }
+
+    @media (max-width: 640px) {
+      display: none;
+    }
   }
 
   &__phone {
@@ -346,64 +948,179 @@ body.exam-site {
     font-size: 24px;
     line-height: 29px;
     letter-spacing: 1px;
-    margin-top: 20px;    
+    margin-top: 20px;
+    font-family: 'Montserrat', sans-serif;   
+    
+    @media (max-width: 769px) {
+      font-size: 18px;
+      line-height: 21px;
+      letter-spacing: 0.3px;
+    }
   }
 
   &__button {
     @include exam-button2();
     margin-top: 30px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      margin-top: 20px;
+    }
+    
+    @media (max-width: 640px) {
+      margin-top: 15px;
+    }
+  }
+
+  &__map-img {
+    background: url(./img/1map.png) no-repeat center / cover;
+    max-width: 1180px;
+    height: 400px;
+
+    @media (max-width: 640px) {
+      height: 290px;
+      width: 100%;     
+    }
+  }
+
+  &__phone-button {
+    @include exam-button1();    
+    margin: -65px auto 0 auto;
+    width: 85% !important;
+
+    @media (min-width: 640px) {
+      display: none;    
+    }
   }
 }
 
 .exam-footer {
   margin-top: 105px;
+
+  @media (max-width: 639px)  {
+    margin-top: 85px;
+  }
+ 
+  @media (max-width: 769px) and (min-width: 640px) {
+    margin-top: 70px;
+  }
   
   &__nav {
     display: flex;
     justify-content: space-between;
-    align-items: center
+    align-items: center;
+    
+    @media (max-width: 639px)  {
+      display: block;
+    }
   }
 
   &__site-links {
     display: flex;
+
+    @media (max-width: 639px)  {
+      display: flex;
+    }
   }
 
   &__link {
+    padding-bottom: 7px;
     margin-right: 30px;
     font-size: 12px;
     line-height: 18px;
     text-transform: uppercase;
+
+    
+    @media (max-width: 769px) {
+    font-size: 10px;
+    line-height: 15px;    
+    letter-spacing: 0px;
+    margin-right: 20px;
+    }    
   }
 
   &__social-links {
     display: flex;
+
+    @media (max-width: 639px)  {
+      margin-top: 20px;
+    }
   }
 
   &__p-link {
     margin-right: 10px;
     @include contact-items (0px -68px);
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      margin-right: 9px;
+    }
+
+    @media (max-width: 639px)  {
+      display: block;
+    }
   }
 
   &__inst-link {
     @include contact-items (-30px -68px);
     margin-right: 10px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      margin-right: 9px;
+    }
+    
+    @media (max-width: 639px)  {
+      display: block;
+    }
   }
 
   &__twit-link {
     @include contact-items (-60px -68px);
     margin-right: 10px;
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      margin-right: 9px;
+    }
+
+    @media (max-width: 639px)  {
+      display: block;
+    }
   }
 
   &__fb-link {
     margin-right: 28px;
     @include contact-items (-90px -68px);
+
+    @media (max-width: 769px) and (min-width: 640px) {
+      margin-right: 19px;
+    }
+
+    @media (max-width: 639px)  {
+      display: block;
+    }
   }
 
   &__button {
     @include exam-button1 ();
+
+    @media (max-width: 639px) {
+      display: none;
+    }
   }
 
-  &__box {
+  &__hidden-button {
+    @media (min-width: 639px)  {
+      display: none;
+    }
+
+    @include exam-button1 ();
+    margin-top: 20px;
+  }
+
+  &__info1 {
+    @media (max-width:790px) and(min-width: 640px) {
+      display: none;
+    }
+  }
+  &__mainbox {
     letter-spacing: 0.3px;
     margin-top: 27px;
     font-size: 14px;
@@ -411,11 +1128,18 @@ body.exam-site {
     display: grid;
     grid-template-columns: 3fr 5fr 4fr;
     grid-gap: 10px;
+    @media (max-width: 769px) {
+      display: block;
+      }
   }
 
   &__phone {
     font-weight: bold;
     font-size: 15px;
+
+    @media (max-width:790px) and (min-width: 640px) {
+      display: none;
+    }
   }
 
   &__adress {
@@ -429,5 +1153,52 @@ body.exam-site {
   &__company-info {
     text-align: right;
     line-height: 32px;
+
+    @media (max-width: 639px)  {
+      text-align: left;
+      margin-top: 20px;
+    }
+  }
+
+  &__tablet-box {
+    font-size: 14px;
+    line-height: 23px;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+    letter-spacing: 0.3px;
+
+    @media (min-width: 769px){
+      display: none;
+    }
+
+    @media (max-width: 639px) {
+      display: none;
+    }
+  }
+
+  &__tablet-phone {
+    font-weight: bold;
+    margin-bottom: 5px;
+  }
+
+  &__tablet-adress {
+    margin-bottom: 20px;
+  }
+
+  &__tablet-worktime {
+    margin-bottom: 5px;
+  }
+
+  &__tablet-right-infoblock {
+    text-align: right;
+  }
+
+  &__tablet-copyright {
+    margin-top: 10px;
+  }
+
+  &__tablet-designed {
+    margin-top: 7px;
   }
 }

@@ -11,7 +11,7 @@
   </head>
   <body class="exam-site">
     <header class="new-header">
-      <div class="container">
+      <div class="ex-container">
         <div class="new-header__content">
           <nav class="new-header__links">
             <div class="new-header__brand"></div>
@@ -27,267 +27,394 @@
             <a href="#" class="new-header__button">
               Schedule Appointment
             </a>
+            <div class="new-header__hidden-nav"></div>
           </div>
         </div>
       </div>
     </header>
-      <section class="Company">
-        <div class="company__container">
-          <article class="company__info">
-            <div class="border"></div>
-            <h1 class="company__title">
-              Healthy Spine Family Chiropractic
-            </h1>
-            <p class="company__text">
-              Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same.
+    <section class="Company">
+      <div class="company__container">
+        <article class="company__info">
+          <div class="border"></div>
+          <h1 class="company__title">
+            Healthy Spine Family Chiropractic
+          </h1>
+          <p class="company__text">
+            Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same.
+          </p>
+          <div class="company__button">
+            get in touch now
+          </div>
+          <div class="company__links">
+            <a href="#" class="company__p-link"></a>
+            <a href="#" class="company__inst-link"></a>
+            <a href="#" class="company__twit-link"></a>
+            <a href="#" class="company__fb-link"></a>
+          </div>
+        </article>
+        <div class="company__image">    
+        </div>
+        <div class="company__phone-image"></div>
+      </div>
+    </section>
+    <section class="pain-treatment">
+      <div class="ex-container">
+        <div class="pain-treatment__content">
+          <div class="pain-treatment__img">
+            
+          </div>
+          <article class="pain-treatment__info">
+            <div class="border pain-treatment__border"></div>
+            <h2 class="pain-treatment__title">
+              Comprehensive Pain Treatment
+            </h2>
+            <p class="pain-treatment__text">
+              Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same and so your chiropractic treatment will be tailored to you. Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same and so your chiropractic treatment will be tailored to you. Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same and so your chiropractic treatment will be tailored to you.
             </p>
-            <div class="company__button">
-              get in touch now
-            </div>
-            <div class="company__links">
-              <a href="#" class="company__p-link"></a>
-              <a href="#" class="company__inst-link"></a>
-              <a href="#" class="company__twit-link"></a>
-              <a href="#" class="company__fb-link"></a>
+            <div class="pain-treatment__button">
+              learn more
             </div>
           </article>
-          <div class="company__image">
-            <img src="./img/exam1.png">
-          </div>
         </div>
-      </section>
-      <section class="pain-treatment">
-        <div class="container">
-          <div class="pain-treatment__content">
-            <div class="pain-treatment__img">
-              <!-- <img src="./img/2rectangle.png"> -->
-            </div>
-            <article class="pain-treatment__info">
-              <div class="border pain-treatment__border"></div>
-              <h2 class="pain-treatment__title">
-                Comprehensive Pain Treatment
-              </h2>
-              <p class="pain-treatment__text">
-                Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same and so your chiropractic treatment will be tailored to you. Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same and so your chiropractic treatment will be tailored to you. Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages. We understand that not all bodies are the same and so your chiropractic treatment will be tailored to you.
-              </p>
-              <div class="pain-treatment__button">
-                learn more
-              </div>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="services">
-        <div class="services__container">
-          <div class="services__content">
-            <div class="border"></div>
-            <h2 class="services__title">
-              Services
-            </h2>
-            <div class="services__cards">
-                @@include('./../components/services-card.html', {
-                  "href" : "./img/1serv.png",
+      </div>
+    </section>
+    <section class="services">
+      <div class="services__container">
+        <div class="services__content">
+          <div class="border"></div>
+          <h2 class="services__title">
+            Services
+          </h2>
+          <div class="services__cards">
+            <div class="services__card">  
+              @@include('./../components/services-card.html', {
+                  "href" : "service-card__img1",
                   "title" : "Chiropractic",
                   "link1" : "Chiropractic Adjustment",
                   "link2" : "Flexion-distraction",
                   "link3" : "Thompson",
                   "link4" : "View All Services",
+                  "hidden-text" : "Chiropractic", 
                   "text" : "Chiropractic care is a unique science that focuses on restoring and maintaining health, while most other healing arts are designed to treat disease."
                 })
-                <div class="services__card">
-                @@include('./../components/services-card.html', {
-                  "href" : "./img/2serv.png",
-                  "title" : "Acupuncture",
-                  "link1" : "Cupping",
-                  "link2" : "Chinese Herbs",
-                  "link3" : "",
-                  "link4" : "",
-                  "text" : "Healthy Spine Family Chiropractic, serves the Thornton and surrounding communities and it provides a natural, conservative approach to your health care."
-                })
+            </div>
+            <div class="services__card2">
+              @@include('./../components/services-card.html', {
+                "href" : "service-card__img2",
+                "title" : "Acupuncture",
+                "link1" : "Cupping",
+                "link2" : "Chinese Herbs",
+                "link3" : "",
+                "link4" : "",
+                "hidden-text" : "Chiropractic",
+                "text" : "Healthy Spine Family Chiropractic, serves the Thornton and surrounding communities and it provides a natural, conservative approach to your health care."
+              })
+            </div>
+            <div class="services__card3">
+              @@include('./../components/services-card.html', {
+                "href" : "service-card__img3",
+                "title" : "Massage",
+                "link1" : "Deep Tissue",
+                "link2" : "Trigger Point ",
+                "link3" : "Sport Massage ",
+                "link4" : "Myofascial Release",
+                "hidden-text" : "Chiropractic",
+                "text" : "Healthy Spine Family Chiropractic, serves the Thornton and surrounding communities and it provides a natural, conservative approach to your health care."
+              })
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="advantages">
+      <div class="advantages__container">
+        <div class="border"></div>
+        <h2 class="advantages__title">
+            Advantages
+        </h2>
+        <p class="advantages__text">
+            Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages.
+        </p>
+        <div class="advantages__cards">
+          @@include('./../components/advantages-card.html', {
+            "img" : "advantages-card__img1",
+            "title" : "Multi Disciplinary Practice",
+            "text" : "We offer chiropractic, massage and acupuncture."
+          })
+          <div class="advantages__card_margin">
+            @@include('./../components/advantages-card.html', {
+              "img" : "advantages-card__img2",
+              "title" : "The Doctor Speaks Spanish",
+              "text" : "We strive to provide complete care for our patients. We speak English and Spanish."
+            })
+          </div>
+          @@include('./../components/advantages-card.html', {
+            "img" : "advantages-card__img3",
+            "title" : "Over 10 Years of Experience",
+            "text" : "The Doctor has 10+ years of experience in the chiropractic."
+          })
+          <div class="advantages__card_margin">
+            @@include('./../components/advantages-card.html', {
+              "img" : "advantages-card__img4",
+              "title" : "Insurance",
+              "text" : "We accept most insurance and file the claims for you."
+            })
+          </div>
+        </div>
+        <div class="advantages__phone-cards">
+          <div class="advantages__phone-card">
+            <div class="advantages__phonecard-img1"></div>
+            <div class="advantages__phonecard-content">
+              <div class="advantages__phonecard-title">
+                Multi Disciplinary Practice
               </div>
-                @@include('./../components/services-card.html', {
-                  "href" : "./img/3serv.png",
-                  "title" : "Massage",
-                  "link1" : "Deep Tissue",
-                  "link2" : "Trigger Point ",
-                  "link3" : "Sport Massage ",
-                  "link4" : "Myofascial Release",
-                  "text" : "Healthy Spine Family Chiropractic, serves the Thornton and surrounding communities and it provides a natural, conservative approach to your health care."
-                })
+              <div class="advantages__phonecard-text">
+                We offer chiropractic, massage and acupuncture.
+              </div>
+            </div>
+          </div>
+          <div class="advantages__phone-card">
+            <div class="advantages__phonecard-img2"></div>
+            <div class="advantages__phonecard-content">
+              <div class="advantages__phonecard-title">
+                Over 10 Years of Experience
+              </div>
+              <div class="advantages__phonecard-text">
+                The Doctor has 10+ years of experience in the chiropractic.
+              </div>
+            </div>
+          </div>
+          <div class="advantages__phone-card">
+            <div class="advantages__phonecard-img3"></div>
+            <div class="advantages__phonecard-content">
+              <div class="advantages__phonecard-title">
+                The Doctor Speaks Spanish
+              </div>
+              <div class="advantages__phonecard-text">
+                We strive to provide complete care for our patients. We speak English and Spanish.
+              </div>
+            </div>
+          </div>
+          <div class="advantages__phone-card">
+            <div class="advantages__phonecard-img4"></div>
+            <div class="advantages__phonecard-content">
+              <div class="advantages__phonecard-title">
+                Insurance
+              </div>
+              <div class="advantages__phonecard-text">
+                We accept most insurance and file the claims for you.
+              </div>
             </div>
           </div>
         </div>
-      </section>
-      <section class="advantages">
-        <div class="advantages__container">
-          <div class="border"></div>
-          <h2 class="advantages__title">
-              Advantages
-          </h2>
-          <p class="advantages__text">
-              Healthy Spine Family Chiropractic was created for the necessity of custom made chiropractic treatment for all ages.
-          </p>
-          <div class="advantages__cards">
-              @@include('./../components/advantages-card.html', {
-                "img" : "./img/1ad.png",
-                "title" : "Multi Disciplinary Practice",
-                "text" : "We offer chiropractic, massage and acupuncture."
-              })
-              @@include('./../components/advantages-card.html', {
-                "img" : "./img/2ad.png",
-                "title" : "The Doctor Speaks Spanish",
-                "text" : "We strive to provide complete care for our patients. We speak English and Spanish."
-              })
-              @@include('./../components/advantages-card.html', {
-                "img" : "./img/3ad.png",
-                "title" : "Over 10 Years of Experience",
-                "text" : "The Doctor has 10+ years of experience in the chiropractic."
-              })
-              @@include('./../components/advantages-card.html', {
-                "img" : "./img/4ad.png",
-                "title" : "Insurance",
-                "text" : "We accept most insurance and file the claims for you."
-              })
-          </div>
-        </div>
-      </section>      
-      <section class="doctor">
-        <div class="container">
-          <div class="doctor__content">
-            <div class="doctor__img">
-              <img src="./img/4ex.png">
+      </div>
+    </section>      
+    <section class="doctor">
+      <div class="ex-container">
+        <div class="doctor__content">
+          <div class="doctor__img"></div>
+          <article class="doctor__info">
+            <div class="border doctor__border"></div>
+            <h2 class="doctor__title">
+              Dr. Osvaldo «Ozzie» Gratacos
+            </h2>
+            <p class="doctor__text">
+              Dr. Osvaldo “Ozzie” Gratacos is a licensed chiropractor serving the Thornton and surrounding communities. Dr. Gratacos graduated from Palmer College of Chiropractic in Florida. After graduating, Dr. Gratacos went back to his home in Puerto Rico to open a practice for 4 years before practicing in Lakewood, Colorado. He is bilingual (spanish/english). Ozzie is certified in extremity adjustments, treatment in golf related injuries, and Cox technique for herniated disc. 
+            </p>
+            <p class="doctor__phone-text">
+                Dr. Osvaldo “Ozzie” Gratacos is a licensed chiropractor serving the Thornton and surrounding communities. 
+            </p>
+            <div class="doctor__phone-view">
+              view more
             </div>
-            <article class="doctor__info">
-              <div class="border doctor__border"></div>
-              <h2 class="doctor__title">
-                Dr. Osvaldo «Ozzie» Gratacos
-              </h2>
-              <p class="doctor__text">
-                Dr. Osvaldo “Ozzie” Gratacos is a licensed chiropractor serving the Thornton and surrounding communities. Dr. Gratacos graduated from Palmer College of Chiropractic in Florida. After graduating, Dr. Gratacos went back to his home in Puerto Rico to open a practice for 4 years before practicing in Lakewood, Colorado. He is bilingual (spanish/english). Ozzie is certified in extremity adjustments, treatment in golf related injuries, and Cox technique for herniated disc. 
+          </article>
+        </div>
+      </div>
+    </section>
+    <section class="testimonials">
+      <div class="testimonials__container">
+        <div class="border testimonials__border"></div>
+        <h2 class="testimonials__title">
+          Testimonials
+        </h2>
+        <div class="testimonials__info">
+          <div class="testimonials__pic"></div>
+          <div class="testimonials__slide testimonials__slide1 ">
+            <div class="testimonials__slide-container">
+              <img src="./img/2tes.png">
+              <p class="testimonials__text">
+                I first visited Dr Ozzie after a sports injury took me out of the game. Dr. Gratacos helped me – not just by relieving my pain, but by showing me how to avoid future injuries. Now I know what not to do so I can keep...
               </p>
-            </article>
-          </div>
-        </div>
-      </section>
-      <section class="testimonials">
-        <div class="testimonials__container">
-          <div class="border testimonials__border"></div>
-          <h2 class="testimonials__title">
-            Testimonials
-          </h2>
-          <div class="testimonials__info">
-            <div class="testimonials__pic">
-              <img src="./img/1tes.png">
-            </div>
-            <div class="testimonials__slide testimonials__slide1 ">
-              <div class="testimonials__slide-container">
-                <img src="./img/2tes.png">
-                <p class="testimonials__text">
-                  I first visited Dr Ozzie after a sports injury took me out of the game. Dr. Gratacos helped me – not just by relieving my pain, but by showing me how to avoid future injuries. Now I know what not to do so I can keep...
-                </p>
-                <div class="testimonials__view">
-                  View More
-                </div>
-                <div class="testimonials__author">
-                  Tony D.
-                </div>
+              <div class="testimonials__view">
+                View More
+              </div>
+              <div class="testimonials__author">
+                Tony D.
               </div>
             </div>
-            <div class="testimonials__slide">
-              <div class="testimonials__slide-container">
-                <img src="./img/2tes.png">
-                <p class="testimonials__text">
-                    Absolutely amazing staff! I will never go anywhere else to get my back and neck fixed! Came in after an auto accident and had me feeling better by the next week! I will recommend to everyone I know!
-                </p>
-                <div class="testimonials__author">
-                    Christopher C.
-                </div>
-              </div>
-            </div>    
           </div>
-          <div class="testimonials__slider-nav">
-            <img src="./img/7tes.png">
-          </div>
-        </div>
-      </section>
-      <section class="exam-contacts">
-        <div class="container">
-          <div class="exam-contacts__mail-pic"></div>
-          <div class="exam-contacts__content">
-            <div class="exam-contacts__container">
-              <h2 class="exam-contacts__title">
-                Contact Us Today
-              </h2>
-              <p class="exam-contacts__text">
-                  We are happy to assist you with any questions you may have regarding your chiropractic needs or insurance questions. You can make an appointment online or by giving us a call at
+          <div class="testimonials__slide testimonials__slide2">
+            <div class="testimonials__slide-container">
+              <img src="./img/2tes.png">
+              <p class="testimonials__text">
+                  Absolutely amazing staff! I will never go anywhere else to get my back and neck fixed! Came in after an auto accident and had me feeling better by the next week! I will recommend to everyone I know!
               </p>
-              <div class="exam-contacts__phone">
-                  (303) 457-2040
-              </div>
-              <div class="exam-contacts__button">
-                make an appointment
+              <div class="testimonials__author">
+                  Christopher C.
               </div>
             </div>
-          </div>
-          <div class="exam-contacts__map-img">
-            <img src="./img/1map.png">
-          </div>
+          </div>    
         </div>
-      </section>
-      <footer class="exam-footer">
-        <div class="container">
-          <div class="exam-footer__nav">
-            <div class="exam-footer__site-links">
-              <div class="exam-footer__link">our story</div>
-              <div class="exam-footer__link">services</div>
-              <div class="exam-footer__link">faq</div>
-              <div class="exam-footer__link">contact</div>          
-            </div>
-            <div class="exam-footer__social-links">
-                <a href="#" class="exam-footer__p-link"></a>
-                <a href="#" class="exam-footer__inst-link"></a>
-                <a href="#" class="exam-footer__twit-link"></a>
-                <a href="#" class="exam-footer__fb-link"></a>
-                <div class="exam-footer__button">contact us</div>
+        <div class="testimonials__phone-slide">
+            <div class="testimonials__slide-container">
+              <img class="testimonials__star" src="./img/2tes.png">
+              <p class="testimonials__text">
+                  I first visited Dr Ozzie after a sports injury took me out of the game. Dr. Gratacos helped me – not just by relieving my pain, but by showing me how to avoid future injuries. Now I know what not to do so I can keep playing.
+              </p>
+              <div class="testimonials__view">
+                View More
+              </div>
+              <div class="testimonials__author">
+                Tony D.
+              </div>
             </div>
           </div>
-          <div class="exam-footer__info">
-            <div class="exam-footer__box">
-              <div class="exam-footer__office-contacts">
-                <div class="exam-footer__phone">
-                  (303) 457-2040
-                </div>
-                <div class="exam-footer__adress">
-                  10313 Washington St., Thornton,
-                  <br>
-                  CO 80229
-                </div>
-              </div>
-              <div class="exam-footer__worktime">
-                  Monday, Wednesday, Thursday — 9:00 AM - 6:00 PM
-                  <br>
-                  Friday — 9:00 AM - 1:00 PM
-                  <br>
-                  Saturday — 10:00 AM - 1:00 PM
-              </div>
-              <div class="exam-footer__company-info">
-                <div class="exam-footer__rating">
-                  Company rating: 
-                  <img src="./img/2tes.png">
-                </div>
-                <div class="exam-footer__copyright">
-                  © Copyright — Healthy Spine Family Chiropractic 2019
-                </div>
-                <div class="exam-footer__designed">
-                  Web Design — Direct Line Development
-                </div>
-              </div>
-              <adress></adress>
+        <div class="testimonials__slider-nav"></div>
+        <div class="testimonials__hidden-nav"></div>
+      </div>
+    </section>
+    <section class="exam-contacts">
+      <div class="container">
+        <div class="exam-contacts__mail-pic"></div>
+        <div class="exam-contacts__content">
+          <div class="exam-contacts__container">
+            <h2 class="exam-contacts__title">
+              Contact Us Today
+            </h2>
+            <p class="exam-contacts__text">
+                We are happy to assist you with any questions you may have regarding your chiropractic needs or insurance questions. You can make an appointment online or by giving us a call at
+            </p>
+            <div class="exam-contacts__phone">
+                (303) 457-2040
+            </div>
+            <div class="exam-contacts__button">
+              make an appointment
             </div>
           </div>
         </div>
-      </footer>
-    
-
-
+        <div class="exam-contacts__map-img"></div>
+        <div class="exam-contacts__phone-button">
+          get direction
+        </div>
+      </div>
+    </section>
+    <footer class="exam-footer">
+      <div class="container">
+        <div class="exam-footer__nav">
+          <div class="exam-footer__site-links">
+            <div class="exam-footer__link">our story</div>
+            <div class="exam-footer__link">services</div>
+            <div class="exam-footer__link">faq</div>
+            <div class="exam-footer__link">contact</div>          
+          </div>
+          <div class="exam-footer__social-links">
+            <a href="#" class="exam-footer__p-link"></a>
+            <a href="#" class="exam-footer__inst-link"></a>
+            <a href="#" class="exam-footer__twit-link"></a>
+            <a href="#" class="exam-footer__fb-link"></a>
+            <div class="exam-footer__button">contact us</div>
+          </div>
+          <div class="exam-footer__hidden-button">
+            contact us
+          </div>
+        </div>
+        <div class="exam-footer__info1">
+          <div class="exam-footer__mainbox">
+            <div class="exam-footer__office-contacts">
+              <div class="exam-footer__phone">
+                (303) 457-2040
+              </div>
+              <div class="exam-footer__adress">
+                10313 Washington St., Thornton,
+                <br>
+                CO 80229
+              </div>
+            </div>
+            <div class="exam-footer__worktime">
+                Monday, Wednesday, Thursday — 9:00 AM - 6:00 PM
+                <br>
+                Friday — 9:00 AM - 1:00 PM
+                <br>
+                Saturday — 10:00 AM - 1:00 PM
+            </div>
+            <div class="exam-footer__company-info">
+              <div class="exam-footer__rating">
+                Company rating: 
+                <img src="./img/2tes.png">
+              </div>
+              <div class="exam-footer__copyright">
+                © Copyright — Healthy Spine Family Chiropractic 2019
+              </div>
+              <div class="exam-footer__designed">
+                Web Design — Direct Line Development
+              </div>
+            </div>            
+          </div>
+        </div>
+        <div class="exam-footer__tablet-box">
+          <div class="exam-footer__tablet-left-infoblock">
+            <div class="exam-footer__tablet-phone">
+              (303) 457-2040
+            </div>
+            <div class="exam-footer__tablet-adress">
+              10313 Washington St., Thornton, CO 80229
+            </div>
+            <div class="exam-footer__tablet-worktime">
+              Monday, Wednesday, Thursday — 9:00 AM - <br> 6:00 PM
+            </div>
+            <div class="exam-footer__tablet-worktime">
+              Friday — 9:00 AM - 1:00 PM
+            </div>
+            <div class="exam-footer__tablet-worktime">
+              Saturday — 10:00 AM - 1:00 PM
+            </div>
+          </div>
+          <div class="exam-footer__tablet-right-infoblock">
+              <div class="exam-footer__tablet-rating">
+                Company rating: 
+                <img src="./img/2tes.png">
+              </div>
+              <div class="exam-footer__tablet-copyright">
+                © Copyright — Healthy Spine Family <br> Chiropractic 2019
+              </div>
+              <div class="exam-footer__tablet-designed">
+                Web Design — Direct Line Development
+              </div>
+          </div>
+        </div>
+        <!-- <div class="exam-footer__phone">
+          <div class="exam-footer__phone-links">
+            <div class="exam-footer__phone-link">
+              our story
+            </div>
+            <div class="exam-footer__phone-link">
+              services
+            </div>
+            <div class="exam-footer__phone-link">
+              faq
+            </div>
+            <div class="exam-footer__phone-link">
+              
+            </div>
+            <div class="exam-footer__phone-link">
+              
+            </div>
+          </div>
+        </div> -->
+      </div>
+    </div>
+  </footer>
+</body>
   
+
+
