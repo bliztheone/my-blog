@@ -15,6 +15,69 @@ body.exam-site {
   }
 }
 
+.background1 {
+  background-image: url('./img/bg1.png');
+  background-size: cover;
+  width: 590px;
+  height: 1226px;
+  position: absolute;
+  top: 775px;
+  left: -23px;
+  z-index: -1;
+
+  @media (max-width: 769px) and (min-width: 640px) {
+    top: 290px;
+    left: -200px;
+    transform: scale(0.7);
+  }
+
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.background2 {
+  background-image: url('./img/bg2.png');
+  background-size: cover;
+  width: 593px;
+  height: 1259px;
+  position: absolute;
+  top: 2082px;
+  right: -30px;
+  z-index: -1;
+
+  @media (max-width: 769px) and (min-width: 640px) {
+    top: 1330px;
+    right: -190px;
+    transform: scale(0.7);
+  }
+
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
+.background3 {
+  background-image: url('./img/bg3.png');
+  background-repeat: no-repeat;
+  width: 590px;
+  height: 1226px;
+  position: absolute;
+  top: 3569px;
+  left: -24px;
+  z-index: -1;
+
+  @media (max-width: 769px) and (min-width: 640px) {
+    top: 2700px;
+    left: -200px;
+    transform: scale(0.7);
+  }
+
+  @media (max-width: 639px) {
+    display: none;
+  }
+}
+
 .new-header {
   padding-top: 40px;
 
@@ -243,13 +306,13 @@ body.exam-site {
       margin-top: 35px;
     }
 
-    @media (max-width: 400px)  {
+    @media (max-width: 640px)  {
       display: none;
     }
   }
 
   &__phone-image {
-    @media (max-width: 400px)  {
+    @media (max-width: 640px)  {
       background: url(./img/1ph.png) no-repeat / contain;
       position: absolute;
       width: 189px;  
@@ -830,9 +893,9 @@ body.exam-site {
   &__slider-nav {
     background: url(./img/7tes.png) no-repeat center / contain;
     margin-top: 40px;
-    margin-left: 200px;
+    margin-left: 250px;
     max-width: 760px;
-    height: 16px;
+    height: 18px;
     
     @media (max-width: 1000px) and (min-width: 640px) {
       width: 100%;
