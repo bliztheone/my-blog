@@ -48,8 +48,8 @@ body.exam-site {
 
   @media (max-width: 769px) and (min-width: 640px) {
     top: 1330px;
-    right: -190px;
-    transform: scale(0.7);
+    right: -89px;
+    transform: scale(0.6);
   }
 
   @media (max-width: 639px) {
@@ -493,12 +493,11 @@ body.exam-site {
 
   &__container {
     max-width: 1220px;
-    margin:0 0px 0 120px;
-    padding: 0 20px 0 20px;
+    margin:0 auto;
+    padding: 0 105px 0 145px;
     
     @media (max-width: 769px) and (min-width: 640px) {
       padding: 0 35px 0 95px; 
-      margin: 0;
     }
 
     @media (max-width: 639px)  {
@@ -564,7 +563,8 @@ body.exam-site {
 
       margin-bottom: 15px;
       display: flex; 
-      justify-content: space-between;         
+      align-items: center;
+      justify-content: center;         
     }
 
     &__phonecard-content {
@@ -726,12 +726,11 @@ body.exam-site {
 
   &__container {
     max-width: 1220px;
-    margin:0 0px 0 120px;
-    padding: 0 20px 0 20px;
+    margin:0 auto;
+    padding: 0 105px 0 145px;
     
     @media (max-width: 769px) and (min-width: 640px) {
-      padding: 0 85px 0 95px; 
-      margin: 0;
+      padding: 0 35px 0 95px; 
     }
 
     @media (max-width: 639px)  {

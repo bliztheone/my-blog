@@ -26,10 +26,12 @@
     grid-template-columns: 3fr 9fr;
     margin-top: 40px;
     padding-bottom: 70px;
-    @media (max-width: 769px) and (min-width: 321px) {
+    
+    @media (max-width: 769px) and (min-width: 542px) {
       margin-top: 30px;
       padding-bottom: 50px;
     }
+
     @media (max-width: 541px) {
       margin-top: 20px;
       display: block;
@@ -42,6 +44,7 @@
     justify-content: space-between;
     flex-direction: column;
     margin-left: 20px;
+    
     @media (max-width: 541px) {
       margin-left: 0px;
       display: block;
@@ -65,7 +68,7 @@
       font-size: 18px;
       line-height: 25px;
     }
-    @media (max-width: 320px) {
+    @media (max-width: 540px) {
       font-size: 16px;
       line-height: 22px;
       margin-top: 25px;
