@@ -3,7 +3,7 @@
   <meta charset="UTF-8">
   <title>Блог Александра Филоненко</title>
   <link rel="stylesheet" href="./main.css">
-  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="shortcut icon" href="./img/favicon.png" type="image/png">
   <link href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300,700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.3.1/css/bootstrap-reboot.min.css">
@@ -23,21 +23,25 @@
             <div class="blog__preview">
               @@include('./../components/preview.html')
             </div>
-            <div class="blog__preview">
+            <div class="blog__preview" id="hide1">
               @@include('./../components/preview.html')
             </div>          
-            <div class="blog__preview">
+            <div class="blog__preview" id="hide1">
               @@include('./../components/preview.html')
             </div>
-            <div class="blog__preview">
+            <div class="blog__preview" id="hide2">
               @@include('./../components/preview.html')
             </div>
-            <div class="blog__preview">
+            <div class="blog__preview" id="hide2">
               @@include('./../components/preview.html')
             </div>
           </div>
-          <div class="blog__news-button" id="bebas-font">
-            загрузить еще
+          <div class="blog__button">
+            @@include('./../components/button.html', {
+              "text": "Загрузить еще",
+              "href": "#",
+              "class": "button_center"
+            })
           </div>
       </div>
     </div>

@@ -8,7 +8,7 @@
 
   &__navlink {
     display: none;
-    @media (max-width: 430px) {
+    @media (max-width: 580px) {
       display: block;
     }
   }
@@ -16,6 +16,7 @@
   &__brand:hover {
     transform: scale(1.4);
   }
+
   &__content {
     display: flex;
     justify-content: space-between;
@@ -29,7 +30,8 @@
     line-height: 22px;
     margin-left: 12px;
     color: black;
-    @media (max-width: 430px) {
+
+    @media (max-width: 580px) {
       display: none;
     }
 

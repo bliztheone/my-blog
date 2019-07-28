@@ -22,8 +22,12 @@ h1 {
   margin: 0 auto;
   padding: 0 20px;
   
-  @media (max-width: 769px) and (min-width: 321px) {
+  @media (max-width: 769px) and (min-width: 541px) {
     padding: 0 34px;
+  }
+
+  @media (max-width: 540px) {
+    padding: 0 20px;
   }
 }
 
@@ -71,7 +75,7 @@ $text-size36: 36px;
 }
 
 #hide2 {display: block;
-  @media (max-width: 541px) {
+  @media (max-width: 580px) {
     display: none;
   }
 }

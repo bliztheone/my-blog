@@ -9,11 +9,13 @@
     font-size: 55px;
     line-height: 75px;
     text-transform: uppercase;
+    
     @media (max-width: 769px) and (min-width: 321px) {
       @include bold(45px);
       line-height: 61px;
       padding-top: 29px;
     }
+    
     @media (max-width: 320px) {
       font-size: 30px;
       line-height: 41px;
@@ -64,10 +66,12 @@
   &__text {
     color:white;
     font-weight: 300;
+    
     @media (max-width: 769px) and (min-width: 541px) {
       font-size: 18px;
       line-height: 25px;
     }
+    
     @media (max-width: 540px) {
       font-size: 16px;
       line-height: 22px;
@@ -90,11 +94,11 @@
   background: #F2F2F2;
   padding-bottom: 55px;
   
-  @media (max-width: 769px) and (min-width: 541px) {
+  @media (max-width: 769px) and (min-width: 441px) {
     padding-bottom: 40px;
   }
   
-  @media (max-width: 769px) {
+  @media (max-width: 420px) {
     padding-bottom: 20px;
   }
 
@@ -104,12 +108,14 @@
     line-height: 75px;
     text-align: center;
     text-transform: uppercase;
-    @media (max-width: 769px) and (min-width: 321px) {
+    
+    @media (max-width: 769px) and (min-width: 421px) {
       font-size: 30px;
       line-height: 61px;
       padding-top: 29px;
     }
-    @media (max-width: 320px) {
+    
+    @media (max-width: 420px) {
       font-size: 30px;
       line-height: 41px;
       padding-top: 28px;
@@ -122,14 +128,15 @@
     grid-gap: 20px;
     grid-template-columns: 1fr 1fr 1fr;
     
-    @media (max-width: 769px) and (min-width: 541px) {
+    @media (max-width: 769px) and (min-width: 581px) {
       margin-top: 30px;
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
-    @media (max-width: 540px) {
+    
+    @media (max-width: 580px) {
       margin-top: 20px;
-      display: block;
+      display: block;      
     }
   }
 }

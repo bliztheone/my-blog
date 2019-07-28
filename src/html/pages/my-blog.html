@@ -1,5 +1,6 @@
 <html lang="ru">
   <head>
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta charset="UTF-8">
     <title>Блог Александра Филоненко</title>
     <link href="http://allfont.ru/allfont.css?fonts=bebas-neue" rel="stylesheet" type="text/css" />
@@ -18,7 +19,7 @@
             </h1>
             <div class="my-info__info">
               <div class="my-info__image">
-                <img src="./img/фото (2).png">
+                <!-- <img src="./img/фото (2).png"> -->
               </div>
               <div class="my-info__header-text">
                 <h2 class="my-info__title2">
@@ -56,30 +57,34 @@
                 "date" : "17.03.2017",
                 "text" : "Красивый закат и девушка"
               })
-
-              @@include('./../components/image-card.html', {
-                "href" : "./img/pic3.png",
-                "date" : "21.01.2017",
-                "text" : "Красивые горы на фоне"
-              })
-
-              @@include('./../components/image-card.html', {
-                "href" : "./img/pic4.png",
-                "date" : "13.06.2017",
-                "text" : "Успела заснять капитара Marvel"
-              })
-
-              @@include('./../components/image-card.html', {
-                "href" : "./img/pic5.png",
-                "date" : "03.08.2016",
-                "text" : "Эмма Уотсон уже не торт"
-              })
-
-              @@include('./../components/image-card.html', {
-                "href" : "./img/pic6.png",
-                "date" : "30.01.2014",
-                "text" : "Жру и не толстею, сжечь меня, шучу"
-              })
+              <div id="hide2">
+                @@include('./../components/image-card.html', {
+                  "href" : "./img/pic3.png",
+                  "date" : "21.01.2017",
+                  "text" : "Красивые горы на фоне"
+                })
+              </div>
+              <div id="hide1">
+                @@include('./../components/image-card.html', {
+                  "href" : "./img/pic4.png",
+                  "date" : "13.06.2017",
+                  "text" : "Успела заснять капитара Marvel"
+                })
+              </div>
+              <div id="hide1">
+                @@include('./../components/image-card.html', {
+                  "href" : "./img/pic5.png",
+                  "date" : "03.08.2016",
+                  "text" : "Эмма Уотсон уже не торт"
+                })
+            </div>
+              <div id="hide2">
+                @@include('./../components/image-card.html', {
+                  "href" : "./img/pic6.png",
+                  "date" : "30.01.2014",
+                  "text" : "Жру и не толстею, сжечь меня, шучу"
+                })
+            </div>
                </div>
                <div class="my-info__button">
                @@include('./../components/button.html', {

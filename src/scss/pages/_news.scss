@@ -3,36 +3,104 @@
   padding-top: 50px;
   padding-bottom: 57px;
 
+  @media (max-width: 769px) and (min-width: 421px) {
+    padding-bottom: 35px;
+  }
+
+  @media (max-width: 420px) {
+    padding-bottom: 20px;
+  }
+
   &__title1 {
     display: inline;
     line-height: 75px;
     @include bold(55px);
     text-transform: uppercase;
+
+    @media (max-width: 769px) and (min-width: 421px) {
+      font-size: 35px;
+      line-height: 61px;
+      padding-top: 25px;
+      margin-bottom: 40px;
+    }
+
+    @media (max-width: 420px) {
+      font-size: 35px;
+      line-height: 41px;
+      padding-top: 15px;
+      margin-bottom: 10px;
+    }
+  }
+
+  &__title-ident {
+    @media (max-width: 769px) and (min-width: 541px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media (max-width: 540px) {
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 25px;
+    }
   }
 
   &__title2 {
     margin: 55px 0 0 0;
-    line-height: 60px;
+    // line-height: 60px;
     @include bold(44px);
     text-transform: uppercase;
+
+    @media (max-width: 769px) and (min-width: 421px) {
+      font-size: 30px;
+      // line-height: 61px;
+      padding-top: 29px;
+      margin-bottom: 10px;
+    }
+    
+    @media (max-width: 420px) {
+      font-size: 25px;
+      // line-height: 41px;
+      padding-top: 0px;
+      margin-bottom: 10px;
+    }
   }
 
   &__image {
+    background: url(./img/картинка2.png) no-repeat center / cover;
     margin-top: 45px;
     margin-bottom: 40px;
+    // width: 1180px;
+    height: 299px; 
+
+    @media (max-width: 769px) and (min-width: 541px) {
+      height: 200px;
+    }
+    @media (max-width: 540px) {
+      height: 100px;
+    }
   }
 
   &__text {
-    width: 980px;
+    width: 100%;
     margin: auto;
+
+    @media (max-width: 769px) and (min-width: 541px) {
+      font-size: 18px;
+      line-height: 25px;
+    }
+    @media (max-width: 540px) {
+      font-size: 16px;
+      line-height: 22px;
+      margin-top: 25px;
+    }
 
       &_spacing {
         margin-top: 52px;
       }
   }
 
-    &__date {
-      margin-top: 40px;
-    }
+  &__date {
+    margin-top: 40px;
+  }
 
 }
